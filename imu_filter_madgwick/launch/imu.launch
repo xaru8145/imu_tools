@@ -1,6 +1,11 @@
- <launch>
-<node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen">
+<launch>
+
+  <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_madgwick" output="screen">
     <param name="use_mag" value="false" />
     <param name="use_magnetic_field_msg" value="false" />
- </node>	
+  </node>
+
+  <node pkg="imu_filter_madgwick" type="imu_add_covariances" name="imu_add_covariances" output="screen">
+  </node>
+
 </launch>
